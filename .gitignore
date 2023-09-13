@@ -1,0 +1,25 @@
+# Node related
+node_modules/
+npm-debug.log
+
+# Build results
+dist/
+build/
+
+# TypeScript
+*.tsbuildinfo
+tsc-debug.log
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDEs and editors
+.idea/
+*.swp
+*.swo
+
+# OS generated
+.DS_Store
+Thumbs.db
