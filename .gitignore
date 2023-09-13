@@ -2,10 +2,6 @@
 node_modules/
 npm-debug.log
 
-# Build results
-dist/
-build/
-
 # TypeScript
 *.tsbuildinfo
 tsc-debug.log
