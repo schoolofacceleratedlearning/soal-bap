@@ -8,7 +8,7 @@
     "dev": "npx nodemon",
     "start": "npm run build && node build/index.js",
     "ts.check": "tsc --project tsconfig.json",
-    "add-build": "git add dist",
+    "add-build": "git add build",
     "lint": "eslint . --ext .ts",
     "prettier-format": "run-script-os",
     "prettier-format:win32": "prettier --config .prettierrc \"./src/**/*.ts\" --write",
@@ -24,8 +24,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run prettier-format && npm run lint",
-      "pre-push": "npm run ts.check && npm run build && npm run add-build"
+      "pre-commit": "npm run prettier-format && npm run lint && npm run ts.check && npm run build && npm run add-build"
     }
   },
   "keywords": [],
