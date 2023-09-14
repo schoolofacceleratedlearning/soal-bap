@@ -8,6 +8,10 @@ import { OnSearchDTO } from './on_search.dto';
 export default function onSearchController(req: Request, res: Response) {
   const onSearchDto: OnSearchDTO = req.body;
   console.log('Search callback triggered in bap');
-  sendAcknowledgement(res, 'ACK');
-  return requestForwarder(onSearchDto);
+  try {
+    sendAcknowledgement(res, 'ACK');
+    return requestForwarder(onSearchDto);
+  } catch (error) {
+    res.status(500).json({ error: 'Internal server error' });
+  }
 }
