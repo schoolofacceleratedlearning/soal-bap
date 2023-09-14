@@ -5,7 +5,7 @@ function onSearchController(req, res) {
     var onSearchDto = req.body;
     console.log('Search callback triggered in BAP', onSearchDto);
     try {
-        (0, request_util_1.sendAcknowledgement)(res, 'ACK');
+        // sendAcknowledgement(res, 'ACK');
         return (0, request_util_1.requestForwarder)(onSearchDto);
     }
     catch (error) {
