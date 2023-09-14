@@ -7,6 +7,6 @@ router.get('/', (_req, res) => {
   res.send('Up & running...');
 });
 
-router.get('/on_search', onSearchController);
+router.post('/on_search', onSearchController);
 
 export default router;

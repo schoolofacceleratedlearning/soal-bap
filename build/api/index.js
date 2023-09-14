@@ -9,5 +9,5 @@ var router = express_1.default.Router();
 router.get('/', function (_req, res) {
     res.send('Up & running...');
 });
-router.get('/on_search', on_search_controller_1.default);
+router.post('/on_search', on_search_controller_1.default);
 exports.default = router;
