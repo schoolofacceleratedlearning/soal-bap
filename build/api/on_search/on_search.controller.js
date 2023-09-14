@@ -4,11 +4,15 @@ function onSearchController(req, res) {
     var onSearchDto = req.body;
     console.log('Search callback triggered in BAP', onSearchDto);
     try {
+        setTimeout(function () {
+            res.status(200).json({
+                message: {
+                    data: onSearchDto,
+                },
+            });
+        }, 30000);
         // sendAcknowledgement(res, 'ACK');
         // return requestForwarder(onSearchDto);
-        res.status(200).json({
-            data: onSearchDto,
-        });
     }
     catch (error) {
         console.log('ERROROROROR &^&^&^^& BAP', error);
