@@ -9,7 +9,7 @@ export default function onSearchController(req: Request, res: Response) {
   const onSearchDto: OnSearchDTO = req.body;
   console.log('Search callback triggered in BAP', onSearchDto);
   try {
-    sendAcknowledgement(res, 'ACK');
+    // sendAcknowledgement(res, 'ACK');
     return requestForwarder(onSearchDto);
   } catch (error) {
     console.log('ERROROROROR &^&^&^^& BAP', error);
