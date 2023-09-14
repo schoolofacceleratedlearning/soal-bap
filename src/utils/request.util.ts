@@ -6,11 +6,11 @@ const requestForwarder = async (reqData: any) => {
     const requestOptions = {
       headers: {
         'Content-Type': 'application/json',
-        random_header: 'hey there',
+        random_header: 'random_header',
       },
       withCredentials: true,
     };
-    console.log('calling request forwarder');
+    console.log('Calling request forwarder');
     return await axios.post(
       process.env.PROXY_URI as string,
       reqData,
