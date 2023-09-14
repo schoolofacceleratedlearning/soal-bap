@@ -54,12 +54,13 @@ var requestForwarder = function (reqData) { return __awaiter(void 0, void 0, voi
                     },
                     withCredentials: true,
                 };
-                console.log('Calling request forwarder');
+                console.log('Calling request forwarder from BAP', process.env.PROXY_URI);
+                console.log('REQUEST DATA Calling request forwarder from BAP', reqData);
                 return [4 /*yield*/, axios_1.default.post(process.env.PROXY_URI, reqData, requestOptions)];
             case 1: return [2 /*return*/, _a.sent()];
             case 2:
                 err_1 = _a.sent();
-                console.log('error in request forwarder: ', err_1);
+                console.log('error in request forwarder: ****************** ', err_1);
                 throw new Error(err_1);
             case 3: return [2 /*return*/];
         }
@@ -67,6 +68,7 @@ var requestForwarder = function (reqData) { return __awaiter(void 0, void 0, voi
 }); };
 exports.requestForwarder = requestForwarder;
 var sendAcknowledgement = function (res, ack) {
+    console.log('Acknowledgement Triggered', ack);
     res.status(200).json({
         message: {
             ack: {
