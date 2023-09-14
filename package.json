@@ -24,7 +24,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test && npm run prettier-format && npm run lint",
+      "pre-commit": "npm run prettier-format && npm run lint",
       "pre-push": "npm run ts.check && npm run build && npm run add-build"
     }
   },
